@@ -63,3 +63,6 @@ test('Invalid route should return 404', async () => {
 test('Database should connect successfully', async () => {
     expect(mongoose.connection.readyState).toBe(1); 
 });
+
+
+console.log("test completed")
