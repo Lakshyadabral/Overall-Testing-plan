@@ -65,4 +65,5 @@ test('Database should connect successfully', async () => {
 });
 
 
-console.log("test completed")
+console.log("Testing");
+
