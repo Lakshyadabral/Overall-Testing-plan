@@ -24,5 +24,15 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Debug Environment Variables
+        run: env | grep MAP
+
+      - name: Setup environment variables
+        run: |
+    echo "ATLASDB_URL=${{ mongodb+srv://lakshyadabral24554:Vegito@cluster0.f2qzl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0 }}" >> $GITHUB_ENV
+    echo "MAP_TOKEN=${{ pk.eyJ1IjoibGFrc2h5YWRhYnJhbCIsImEiOiJjbTU0dnZnZzIyMDl0MmtxM2NzNTRtc2x3In0.o0jVjiSbdp0Vzf6kswzz1w }}" >> $GITHUB_ENV
+    echo "SECRET=${{ RP3yK9BDX6AQT8Jfq8kk1JJiwgA }}" >> $GITHUB_ENV
+
+
       - name: Run tests
         run: npm test
